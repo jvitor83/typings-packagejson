@@ -60,7 +60,7 @@ System.register("MyInheritedClass", ["MyClass"], function(exports_3, context_3) 
         }
     }
 });
-System.register("index", ["MyClass", "MyInheritedClass"], function(exports_4, context_4) {
+System.register("typings-packagejson", ["MyClass", "MyInheritedClass"], function(exports_4, context_4) {
     "use strict";
     var __moduleName = context_4 && context_4.id;
     function exportStar_1(m) {

@@ -64,14 +64,14 @@ gulp.task('clean', function () {
 
 gulp.task('build', ['build:dev'], function() {
     
-  //let tsConfigDeclaration = gulp_typescript({module: moduleGeneration, target: targetGeneration, declaration: true, removeComments: true });  
+  let tsConfigDeclaration = gulp_typescript({module: moduleGeneration, target: targetGeneration, declaration: true, removeComments: true });  
   let tsConfigOneFile = gulp_typescript({module: moduleGeneration, target: targetGeneration, declaration: true, removeComments: true, out: 'typings-packagejson.js'});
   
 	return merge2([
         
         gulp.src('app/src/**/*.ts')
                 .pipe(gulp_sourcemaps.init())
-                .pipe(tsConfigOneFile)
+                .pipe(tsConfigDeclaration)
                 .dts
         .pipe(gulp_sourcemaps.write())
         .pipe(gulp.dest('dist/prod/definitions/src'))
