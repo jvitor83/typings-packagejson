@@ -1,6 +1,6 @@
-**This Project: will generate the package for the npm.**
+**PACKAGE Project**: will generate the package for the npm.
 
-Test Project: https://github.com/jvitor83/test-typings-packagejson - Will test this repository (as a npm package)
+**TEST Project**: https://github.com/jvitor83/test-typings-packagejson - Will test this repository (as a npm package)
 
 
 **Description:**
