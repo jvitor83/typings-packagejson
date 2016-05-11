@@ -64,16 +64,15 @@ gulp.task('clean', function () {
 
 gulp.task('build', ['build:dev'], function() {
     
-    
-  let tsConfig = gulp_typescript({module: moduleGeneration, target: targetGeneration, declaration: true, removeComments: true, out: 'typings-packagejson.js'});
+  //let tsConfigDeclaration = gulp_typescript({module: moduleGeneration, target: targetGeneration, declaration: true, removeComments: true });  
+  let tsConfigOneFile = gulp_typescript({module: moduleGeneration, target: targetGeneration, declaration: true, removeComments: true, out: 'typings-packagejson.js'});
   
 	return merge2([
         
         gulp.src('app/src/**/*.ts')
                 .pipe(gulp_sourcemaps.init())
-                .pipe(tsConfig)
+                .pipe(tsConfigOneFile)
                 .dts
-        //.pipe(gulp_concat('security-identity.d.ts'))
         .pipe(gulp_sourcemaps.write())
         .pipe(gulp.dest('dist/prod/definitions/src'))
 
@@ -82,9 +81,8 @@ gulp.task('build', ['build:dev'], function() {
 
 		gulp.src('app/src/**/*.ts')
                 .pipe(gulp_sourcemaps.init())
-                .pipe(tsConfig)
+                .pipe(tsConfigOneFile)
                 .js
-        //.pipe(gulp_concat('security-identity.js'))
         .pipe(gulp_sourcemaps.write())
         .pipe(gulp.dest('dist/prod/js/src'))
 	]);

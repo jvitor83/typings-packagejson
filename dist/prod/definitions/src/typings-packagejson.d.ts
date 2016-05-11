@@ -15,3 +15,8 @@ declare module "MyInheritedClass" {
         MyMethod(): number;
     }
 }
+declare module "index" {
+    export * from "MyInterface";
+    export * from "MyClass";
+    export * from "MyInheritedClass";
+}
