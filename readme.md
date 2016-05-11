@@ -1,4 +1,4 @@
-**PACKAGE Project**: will generate the package for the npm.
+**PACKAGE Project**: This one will generate the package for the npm.
 
 **TEST Project**: https://github.com/jvitor83/test-typings-packagejson - Will test this repository (as a npm package)
 
