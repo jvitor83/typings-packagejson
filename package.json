@@ -1,0 +1,33 @@
+{
+  "name": "typings-packagejson",
+  "version": "1.0.0",
+  "description": "typings-packagejson",
+  "main": "dist/prod/js/src/typings-packagejson.js",
+  "typings": "dist/prod/definitions/src/typings-packagejson.d.ts",
+  "scripts": {
+    "test": "gulp test",
+    "build": "gulp"
+  },
+  "author": "João Vitor Paes de Barros do Carmo <jvitor83@hotmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "dts-generator": "^1.7.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jasmine": "^2.3.0",
+    "gulp-sourcemaps": "^2.0.0-alpha",
+    "gulp-tslint": "^5.0.0",
+    "gulp-typescript": "^2.13.1",
+    "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1",
+    "jasmine-node": "^1.14.5",
+    "merge2": "^1.0.2",
+    "requirejs": "^2.2.0",
+    "run-sequence": "^1.1.5",
+    "tslint": "^3.9.0",
+    "typescript": "^1.8.10",
+    "typings": "^0.8.1"
+  },
+  "dependencies": {}
+}
